@@ -20,7 +20,7 @@ CORS(app)
 
 # Load the model once at startup
 try:
-    model = load_model("model/age_gender_model.keras")
+    model = load_model(os.path.join(os.getcwd(), "model", "age_gender_model.keras"))
     logger.info("Model loaded successfully.")
 except Exception as e:
     logger.error("Failed to load model: %s", e)
